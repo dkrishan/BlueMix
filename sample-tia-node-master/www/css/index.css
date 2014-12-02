@@ -1,0 +1,17 @@
+/*-------------------------------------------------------------------*/
+/* Copyright IBM Corp. 2013 All Rights Reserved                      */
+/*-------------------------------------------------------------------*/
+
+/* pre-definition of ng-cloak to hide template-y goodness */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
+.smallerText {
+    font-size:      60%;
+}
+
+.noWrap {
+    white-space:    nowrap;
+}

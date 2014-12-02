@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- 
+/*-------------------------------------------------------------------*/
+/* Copyright IBM Corp. 2013 All Rights Reserved                      */
+/*-------------------------------------------------------------------*/
+-->
+
+<html ng-app="tia" lang="en">
+
+<!-- ======================================================================= -->
+<head>
+<title>Twitter Influence Analyzer</title>
+
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="images/icon-032.png" />
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+<![endif]-->
+
+<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<!-- ======================================================================= -->
+<body ng-controller="body-controller">
+
+<div class="container-fluid">
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li><img src="images/icon-032.png">
+                <li><a href="#/all">      Home     </a>
+                <li><a href="#/messages"> Messages 
+                    <span ng-cloak ng-show="messages.length" class="badge badge-warning">
+                        {{messages.length}}
+                    </span>
+                </a>
+                <li><a href="#/help">     Help     </a>
+            </ul>
+        </div>
+    </div>    
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div ng-view></div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<!-- ======================================================================= -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+<script src="scripts/package.json.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/services/pageTitleSetter.js"></script>
+<script src="scripts/services/users.js"></script>
+<script src="scripts/controllers/body-controller.js"></script>
+<script src="scripts/controllers/user-controller.js"></script>
+<script src="scripts/controllers/all-controller.js"></script>
+<script src="scripts/controllers/messages-controller.js"></script>
+<script src="scripts/controllers/help-controller.js"></script>
+<script src="scripts/routes.js"></script>
+<script src="scripts/cache.js"></script>
+
+</html>
